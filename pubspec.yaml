@@ -4,7 +4,7 @@ publish_to: 'none'
 version: 1.0.0+1
 
 environment:
-  sdk: ^3.9.0
+  sdk: ">=3.9.0 <4.0.0"
 
 dependencies:
   flutter:
@@ -14,19 +14,34 @@ dependencies:
   cloud_firestore: ^6.0.1
   fluttertoast: ^8.2.1
 
-
-
-
-
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
   flutter_lints: ^6.0.0
+  flutter_launcher_icons: ^0.13.1
+  flutter_native_splash: ^2.3.0
+
+flutter_native_splash:
+  image: assets/logo.jpg
+  color: "#000000"
+  android: true
+  ios: true
+
+  android_gravity: center
+  ios_content_mode: scaleAspectFit
+
+  android_12:
+    image: assets/logo.jpg
+    icon_background_color: "#000000"
+
+
+# 🔹 App launcher icons
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/logo.jpg"
 
 flutter:
-
   uses-material-design: true
-
   assets:
     - assets/logo.jpg

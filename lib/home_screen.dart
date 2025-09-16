@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'app_constants.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -6,14 +7,22 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Home Screen')),
+      appBar: AppBar(
+        title: const Text(AppConstants.appName),
+      ),
       body: Center(
-        child: Text(
-          'Welcome to the App!',
-          style: TextStyle(fontSize: 24, color: Colors.red),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            AppConstants.appLogo(size: 100),
+            const SizedBox(height: 20),
+            const Text(
+              'Welcome to ApexAutoLab!',
+              style: TextStyle(fontSize: 22, color: Colors.white),
+            ),
+          ],
         ),
       ),
-      backgroundColor: Colors.black, // Background color
     );
   }
 }
